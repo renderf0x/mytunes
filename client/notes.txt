@@ -29,7 +29,7 @@ THE PLAY EVENT
 
 EXTRA CREDIT
 
-1. Show the play count (how many times a given song has been played) next to each song title.
+DONE -- 1. Show the play count (how many times a given song has been played) next to each song title.
 
 2. Store application state in localStorage, so it persists after you reload the page.
 
