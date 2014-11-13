@@ -1,0 +1,33 @@
+COMPONENTS
+
+- Data is an array of objects
+- The song model is a single song, with a property play that triggers a play event
+- Songs (= library) is a collection of song models
+  - SongQueue is a subclass of Songs, which is also a collection of song models
+- App model is a model with global properties
+- App view
+  - Player view is a subview of app view, and is bound to Song model
+  - Library view is a subview of appview, bound to the library collection instance of Song models
+    - Library entry view is a subview of library, bound to the song model
+
+
+THE PLAY EVENT
+
+- SETTING
+
+1. LibraryEntryView listens for click events on the DOM
+2. LibraryEntryView triggers a play property on it's model (song)
+3. Song model triggers a play event when it's play property is called
+4. The songs collection (Library) listens for that event
+5. The songs collection (Library) sets the app models current song to be the calling song
+
+- LISTENING
+
+6. The app view listens for changes to the app's current song
+7. The app view calls the set song method of the player view
+8. The player view's set song method renders the song in the DOM
+
+
+
+
+
