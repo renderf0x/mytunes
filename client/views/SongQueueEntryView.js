@@ -4,7 +4,7 @@ define(['backbone'],function(Backbone) {
     // your code here!
     tagName: 'tr',
 
-    template: _.template('<td>(<%= artist %>)</td><td><%= title %></td>'),
+    template: _.template('<td><strong><%= artist %></strong></td><td><%= title %></td>'),
 
     events: {
       'click': function(){

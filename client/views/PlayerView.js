@@ -8,7 +8,6 @@ define(['backbone'], function(Backbone) {
     el: '<audio controls autoplay />',
 
     initialize: function() {
-
     },
 
     events: {

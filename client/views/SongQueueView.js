@@ -8,12 +8,14 @@ define(['backbone','views/SongQueueEntryView'], function(Backbone, SongQueueEntr
       this.render();
       this.listenTo(this.collection, "add", this.render);
       this.listenTo(this.collection, "remove", this.render);
+
+      this.$el.attr('class', 'table table-hover');
     },
 
     render: function() {
       this.$el.children().detach();
 
-      this.$el.html('<th>SongQueue</th>').append(
+      this.$el.html('<th>Artist</th><th>Song</th>').append(
         this.collection.map(function(song){
           return new SongQueueEntryView({model: song}).render();
         })

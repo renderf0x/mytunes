@@ -18,13 +18,19 @@ define(['backbone','views/PlayerView','views/LibraryView','views/SongQueueView']
       this.model.on('change:songQueue', function(){
         this.model.get('songQueue').render();
       } ,this);
+
+      this.$el.attr('class','container app panel');
     },
 
     render: function(){
       return this.$el.html([
-        this.playerView.$el,
-        this.libraryView.$el,
-        this.songQueueView.$el
+        $('<div></div>').attr("class","player panel").append(this.playerView.$el),
+        $('<div></div>').attr('class', 'row')
+        .append($('<div><h4>Song Queue</h4></div>').attr('class', 'col-md-4').append(this.songQueueView.$el))
+        .append($('<div><h4>Library</h4></div>').attr('class', 'col-md-6').append(this.libraryView.$el))
+
+        // this.libraryView.$el,
+        // this.songQueueView.$el
       ]);
     }
 

@@ -29,9 +29,30 @@ THE PLAY EVENT
 
 EXTRA CREDIT
 
-1. Show the play count (how many times a given song has been played) next to each song title.
+1. Show the play count (how many times a given song has been played) next to each song title. {DONE}
 
-2. Store application state in localStorage, so it persists after you reload the page.
+2. Convert your app to use AMD by using Require.js. AMD (asynchronous module definition) is a system for loading JavaScript files asynchronously. [DONE]
+
+3. Store application state in localStorage, so it persists after you reload the page.
+
+-- Download/Install BackBone LocalStorage
+-- Add BackBone LocalStorage adapter to Require config
+-- Instantiate a new LocalStorage collection in the library collection
+-- Call "this.save" in SongModel to save values in local storage as
+key value pairs
+-- Call all values as normal?
+
+SAVING
+// When we enqueue / dequeue save the queue
+// When we play, save the playcount
+
+FETCHING
+// When we load the library, we fetch the song models
+// When we load the sonqueue, we fetch the songQueue
+
+
+
+
 
 4. Improve your application's UI by adding web fonts and replacing your 'Add to queue" and upvote/downvote buttons with icons.
 
@@ -41,9 +62,7 @@ EXTRA CREDIT
 
   Add a router and assign unique URLs to playlists, subpages and/or songs (for example, index.html#songs/:title of the song will play that song).
 
-6. Convert your app to use AMD by using Require.js. AMD (asynchronous module definition) is a system for loading JavaScript files asynchronously.
-
-7. Implement test and functionality for upvote/downvote next to each song title.
+6. Implement test and functionality for upvote/downvote next to each song title.
 
 
 

@@ -2,24 +2,27 @@
 
 define(['backbone','collections/Songs'], function(Backbone, Songs){
   var SongQueue = Songs.extend({
-
+    //localStorage: new Backbone.LocalStorage("songs-backbone"),
     initialize: function(){
       this.on('add', function(song){
         if(this.length === 1){
           this.playFirst();
         }
+        song.save();
       }, this);
 
       this.on('dequeue', function(song){
-        return this.remove(song);
+        return song.destroy(song);
       }, this);
 
       this.on('ended', function(song){
-        this.remove(song);
+        song.destroy(song);
         if(this.length) {
           this.playFirst();
         }
       }, this);
+
+      this.fetch();
 
     },
 

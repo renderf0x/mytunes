@@ -10,6 +10,8 @@ define(['backbone', 'views/LibraryEntryView'], function(Backbone, LibraryEntryVi
         // console.log("play event passed along");
         this.render();
       });
+
+      this.$el.attr('class', 'table table-hover');
     },
 
     render: function(){
@@ -18,7 +20,7 @@ define(['backbone', 'views/LibraryEntryView'], function(Backbone, LibraryEntryVi
       this.$el.children().detach();
       // console.log("LibView render happened");
 
-      this.$el.html('<th>Library</th>').append(
+      this.$el.html('<th>Artist</th><th>Song</th><th>#plays</th>').append(
         this.collection.map(function(song){
           return new LibraryEntryView({model: song}).render();
         })

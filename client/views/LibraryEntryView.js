@@ -3,7 +3,7 @@ define(['backbone'], function(Backbone){
 
     tagName: 'tr',
 
-    template: _.template('<td>(<%= artist %>)</td><td><%= title %></td><td><%= playCount %></td>'),
+    template: _.template('<td><strong><%= artist %></strong></td><td><%= title %></td><td><%= playCount %></td>'),
 
     events: {
       'click': function() {
