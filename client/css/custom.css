@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+  background-color: #DDD;
+}
+
+.player {
+  padding: 30px;
+  margin: auto;
+}
+
+audio {
+  margin: auto;
+}
