@@ -8,21 +8,21 @@ define(['backbone','collections/Songs'], function(Backbone, Songs){
         if(this.length === 1){
           this.playFirst();
         }
-        song.save();
+        //song.save();
       }, this);
 
       this.on('dequeue', function(song){
-        return song.destroy(song);
+        return song.remove(song);
       }, this);
 
       this.on('ended', function(song){
-        song.destroy(song);
+        song.remove(song);
         if(this.length) {
           this.playFirst();
         }
       }, this);
 
-      this.fetch();
+      //this.fetch();
 
     },
 

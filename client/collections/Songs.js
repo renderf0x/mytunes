@@ -1,10 +1,10 @@
 // Songs.js - Defines a backbone collection class for songs.
-define(["models/SongModel", "backbone", "backbone.localStorage"], function(SongModel, Backbone) {
+define(["models/SongModel", "backbone"], function(SongModel, Backbone) {
   var Songs = Backbone.Collection.extend({
     model: SongModel,
-    localStorage: new Backbone.LocalStorage("songs-backbone"),
+    // localStorage: new Backbone.LocalStorage("songs-backbone"),
     initialize: function() {
-      this.fetch();
+      //this.fetch();
     }
   });
   return Songs;
